@@ -1,13 +1,13 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   const heroImages = [
-    '/public/images/herbs-1.jpeg',
-    '/public/images/herbs-2.jpeg',
-    '/public/images/herbs-4.jpeg'
+    '/images/herbs-1.jpeg',
+    '/images/herbs-2.jpeg',
+    '/images/herbs-4.jpeg'
   ];
 
   const products = [
@@ -31,7 +31,7 @@ const Home = () => {
       {/* Hero Section with Parallax Effect */}
       <div className="relative h-screen">
         <div className="absolute inset-0 overflow-hidden">
-          <div 
+          <div
             className="absolute inset-0 w-full h-full transition-transform duration-1000 ease-out transform scale-105"
             style={{
               backgroundImage: `url(${heroImages[currentImageIndex]})`,
