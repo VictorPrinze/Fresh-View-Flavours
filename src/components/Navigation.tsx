@@ -28,7 +28,7 @@ const Navigation = () => {
             <Link to="/" className="transform transition hover:scale-110 block">
               <img
                 className="h-16 w-auto object-contain rounded-lg"
-                src="/src/assets/logo.jpeg"
+                src="/assets/logo.jpeg"
                 alt="Fresh View Flavours Logo"
               />
             </Link>
