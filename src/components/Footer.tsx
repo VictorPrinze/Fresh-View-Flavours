@@ -1,15 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, ExternalLink, ChevronRight, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, ExternalLink, ChevronRight, Heart, LucideIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  const [hoveredLink, setHoveredLink] = useState(null);
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+interface QuickLink {
+  name: string;
+  path: string;
+}
 
-  const quickLinks = [
+interface ContactItem {
+  Icon: LucideIcon;
+  text: string;
+  href: string;
+}
+
+interface SocialLink {
+  Icon: LucideIcon;
+  label: string;
+}
+
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [newsletterEmail, setNewsletterEmail] = useState<string>('');
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
+
+  const quickLinks: QuickLink[] = [
     { name: 'Home', path: '/' },
     { name: 'Products', path: '/products' },
     { name: 'Gallery', path: '/gallery' },
@@ -17,11 +33,27 @@ const Footer = () => {
     { name: 'Contact', path: '/contact' }
   ];
 
-  const handleSubscribe = (e) => {
+  const contactItems: ContactItem[] = [
+    { Icon: MapPin, text: 'Mia Moja Timau, Mount Kenya', href: '#' },
+    { Icon: Phone, text: '+254 720 800 174', href: 'tel:+254748430822' },
+    { Icon: Mail, text: 'info@freshviewflavours.co.ke', href: 'mailto:info@freshviewflavours.co.ke' }
+  ];
+
+  const socialLinks: SocialLink[] = [
+    { Icon: Facebook, label: 'Facebook' },
+    { Icon: Twitter, label: 'Twitter' },
+    { Icon: Instagram, label: 'Instagram' }
+  ];
+
+  const handleSubscribe = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setIsSubmitted(true);
     setNewsletterEmail('');
     // Add newsletter subscription logic here
+  };
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setNewsletterEmail(e.target.value);
   };
 
   return (
@@ -58,7 +90,7 @@ const Footer = () => {
                 <input
                   type="email"
                   value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  onChange={handleEmailChange}
                   placeholder="Enter your email"
                   className="w-full px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 text-sm placeholder:text-gray-400 transition-all duration-300"
                 />
@@ -85,12 +117,12 @@ const Footer = () => {
           <div>
             <h4 className="text-green-300 font-medium mb-4">Quick Links</h4>
             <div className="grid gap-2">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link) => (
                 <motion.div
                   key={link.path}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: 0.1 }}
                 >
                   <Link
                     to={link.path}
@@ -121,11 +153,7 @@ const Footer = () => {
           <div>
             <h4 className="text-green-300 font-medium mb-4">Contact</h4>
             <div className="space-y-4">
-              {[
-                { Icon: MapPin, text: 'Mia Moja Timau, Mount Kenya', href: '#' },
-                { Icon: Phone, text: '+254 720 800 174', href: 'tel:+254720800174' },
-                { Icon: Mail, text: 'info@freshviewflavours.co.ke', href: 'mailto:info@freshviewflavours.co.ke' }
-              ].map((item, index) => (
+              {contactItems.map((item, index) => (
                 <motion.a
                   key={index}
                   href={item.href}
@@ -147,11 +175,7 @@ const Footer = () => {
           <div>
             <h4 className="text-green-300 font-medium mb-4">Follow Us</h4>
             <div className="grid grid-cols-3 gap-4">
-              {[
-                { Icon: Facebook, label: 'Facebook' },
-                { Icon: Twitter, label: 'Twitter' },
-                { Icon: Instagram, label: 'Instagram' }
-              ].map((social, index) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}
                   href="#"

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const heroImages = [
-    '/herb-farm-1.jpg',
-    '/herb-farm-2.jpg',
-    '/herb-farm-3.jpg'
+    '/public/images/herbs-1.jpeg',
+    '/public/images/herbs-2.jpeg',
+    '/public/images/herbs-4.jpeg'
   ];
 
   const products = [

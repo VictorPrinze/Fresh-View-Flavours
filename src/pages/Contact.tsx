@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import  { useState, FormEvent } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +43,7 @@ const Contact = () => {
                 <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1c-8.284 0-15-6.716-15-15V5z" />
                 </svg>
-                <span className="ml-3 text-gray-700">+254 720 800 174</span>
+                <span className="ml-3 text-gray-700">+254 748 430 822</span>
               </div>
 
               <div className="flex items-center">
