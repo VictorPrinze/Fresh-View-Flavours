@@ -16,6 +16,8 @@ const Products = () => {
     {
       name: 'Herbs',
       products: [
+
+       
         {
           name: 'Lovage',
           latin_name: 'Levisticum officinale',
@@ -105,7 +107,13 @@ const Products = () => {
           latin_name: 'Rosmarinus officinalis',
           description: 'Improves memory and concentration. Contains anti-inflammatory compounds. Supports hair growth. Helps with digestion. Rich in antioxidants. Natural antimicrobial properties.',
           image: '/products/Rosemary-sprig.jpg'
-        }
+        },
+         {
+          name: 'Chillies',
+          latin_name: 'Capsicum annuum',
+          description: 'Rich in capsaicin with powerful anti-inflammatory properties. Boosts metabolism and aids weight management. Contains high levels of vitamins C and A. Supports heart health and circulation. Natural pain reliever. Helps boost immune system. May help reduce blood sugar levels. Promotes digestive health.',
+          image: '/products/chillies.jpeg'
+        },
       ]
     },
     // {

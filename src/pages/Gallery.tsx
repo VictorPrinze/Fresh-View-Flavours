@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Maximize, X, ArrowLeft, ArrowRight } from 'l
 const HerbGallery = () => {
   // Generate image paths dynamically
   const generateImagePaths = () => {
-    return Array.from({ length: 68 }, (_, i) => 
+    return Array.from({ length: 79 }, (_, i) => 
       `/images/herbs-${i + 1}.jpeg`
     );
   };

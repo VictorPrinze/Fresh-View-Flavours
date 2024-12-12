@@ -7,7 +7,9 @@ const Home = () => {
   const heroImages = [
     '/images/herbs-1.jpeg',
     '/images/herbs-2.jpeg',
-    '/images/herbs-4.jpeg'
+    '/images/herbs-4.jpeg',
+    '/images/herbs-8.jpeg',
+    '/images/herbs-77.jpeg',
   ];
 
   const products = [

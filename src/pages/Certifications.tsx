@@ -17,15 +17,6 @@ const Certifications = () => {
 
   const certifications: Certification[] = [
     {
-      name: 'Agriculture and Food Authority (AFA)',
-      shortName: 'AFA',
-      description: 'Kenya\'s premier agricultural regulator ensuring quality and safety',
-      detailedDescription: 'The Agriculture and Food Authority is Kenya\'s regulatory body that oversees the production, processing, marketing, and distribution of agricultural products. Our certification ensures we meet the highest standards of food safety and agricultural practices.',
-      logo: '/certification/afa.jpeg',
-      year: 2021,
-      category: 'Government'
-    },
-    {
       name: 'Bureau of Standards & Quality Control',
       shortName: 'BRGS',
       description: 'International quality standards certification for agricultural products',
@@ -60,15 +51,6 @@ const Certifications = () => {
       logo: '/certification/global gap.png',
       year: 2022,
       category: 'International'
-    },
-    {
-      name: 'Kenya Export Promotion and Health Standards',
-      shortName: 'KEPHIS',
-      description: 'Certified for international export standards compliance',
-      detailedDescription: 'KEPHIS certification ensures our products meet international phytosanitary standards and are suitable for export markets.',
-      logo: '/certification/kephis.jpeg',
-      year: 2021,
-      category: 'Export'
     }
   ];
 

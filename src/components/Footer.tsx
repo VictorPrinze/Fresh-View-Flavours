@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
   const contactItems: ContactItem[] = [
     { Icon: MapPin, text: 'Mia Moja Timau, Mount Kenya', href: '#' },
-    { Icon: Phone, text: '+254 720 800 174', href: 'tel:+254748430822' },
+    { Icon: Phone, text: '+254 748430822', href: 'tel:+254748430822' },
     { Icon: Mail, text: 'info@freshviewflavours.co.ke', href: 'mailto:info@freshviewflavours.co.ke' }
   ];
 
