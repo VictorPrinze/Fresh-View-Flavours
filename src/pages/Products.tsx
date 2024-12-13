@@ -103,6 +103,12 @@ const Products = () => {
           image: '/products/Fresh-Sage-Leaves.jpg'
         },
         {
+          name: 'Bay Leaves',
+          latin_name: 'Laurus nobilis',
+          description: 'Powerful antioxidant with numerous health benefits. Supports digestive health by reducing bloating and improving gut function. Contains anti-inflammatory compounds. Helps regulate blood sugar levels. Supports heart health. May improve respiratory function. Rich in vitamins A and C. Aids in wound healing. Supports immune system function. Traditional remedy for reducing joint pain and muscle soreness.',
+          image: '/products/bay-leaves.png'
+        },
+        {
           name: 'Rosemary',
           latin_name: 'Rosmarinus officinalis',
           description: 'Improves memory and concentration. Contains anti-inflammatory compounds. Supports hair growth. Helps with digestion. Rich in antioxidants. Natural antimicrobial properties.',
